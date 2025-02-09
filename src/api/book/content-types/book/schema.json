@@ -1,0 +1,126 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "Book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "genre": {
+      "type": "enumeration",
+      "enum": [
+        "Fiction",
+        "Non-fiction",
+        "Literary Fiction",
+        "Science Fiction & Fantasy",
+        "Mystery & Thriller",
+        "Romance",
+        "Historical Fiction",
+        "Horror",
+        "Young Adult (YA)",
+        "Adventure",
+        "Biography & Memoir",
+        "Self-Help & Personal Development",
+        "Business & Finance",
+        "Health & Wellness",
+        "History & Politics",
+        "Science & Technology",
+        "Travel & Lifestyle",
+        "Poetry",
+        "Plays & Scripts",
+        "Children's Books",
+        "Graphic Novels & Comics",
+        "Anthologies & Short Stories",
+        "Cookbooks & Food",
+        "Spirituality & Religion"
+      ],
+      "default": "Non-fiction"
+    },
+    "author": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "publicationDate": {
+      "type": "date"
+    },
+    "edition": {
+      "type": "integer",
+      "default": 1
+    },
+    "pages": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "buyLinks": {
+      "type": "json"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "text"
+    },
+    "seoKeywords": {
+      "type": "json"
+    },
+    "bookStatus": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "published"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

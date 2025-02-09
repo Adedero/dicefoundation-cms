@@ -1,0 +1,118 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "startTime": {
+      "type": "time",
+      "required": true
+    },
+    "endTime": {
+      "type": "time"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string",
+      "default": "Nigeria"
+    },
+    "mapLink": {
+      "type": "string"
+    },
+    "bannerImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "gallery": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "eventStatus": {
+      "type": "enumeration",
+      "enum": [
+        "upcoming",
+        "ongoing",
+        "past",
+        "cancelled"
+      ],
+      "default": "upcoming"
+    },
+    "registrationLink": {
+      "type": "string"
+    },
+    "socialMediaLinks": {
+      "type": "json"
+    },
+    "price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "availability": {
+      "type": "enumeration",
+      "enum": [
+        "open",
+        "limited seats",
+        "sold out"
+      ],
+      "default": "open"
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "text"
+    },
+    "seoKeywords": {
+      "type": "json"
+    },
+    "tags": {
+      "type": "json"
+    }
+  }
+}
